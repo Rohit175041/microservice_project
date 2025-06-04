@@ -1,0 +1,3 @@
+# Ignore logs directory in email_service
+*.log
+
