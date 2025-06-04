@@ -1,3 +1,10 @@
 # Ignore logs directory in email_service
 *.log
+node_modules
+npm-debug.log
+Dockerfile
+README.md
+.git
+.gitignore
+tests
 
