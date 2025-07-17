@@ -10,8 +10,6 @@ This project demonstrates a microservice architecture using:
 - **Docker & Docker Compose:** Containerization and orchestration for easy local development.
 - **Deployment:** Ready for cloud deployment on platforms like Render.com using Docker containers and managed RabbitMQ.
 
----
-
 ## Architecture Diagram
 
 User Service (Express.js)
@@ -24,9 +22,6 @@ consumes
 v
 Email Service (Worker)
 
-
----
-
 ## Features
 
 - Asynchronous communication between microservices via RabbitMQ using AMQP protocol.
@@ -36,8 +31,6 @@ Email Service (Worker)
 - Deployment-ready configuration using environment variables and dynamic ports.
 - Deployed on Render.com with Docker containers and integrated managed RabbitMQ service.
 
----
-
 ## Technologies Used
 
 - **Node.js** with **Express.js** for REST API development.
@@ -46,18 +39,13 @@ Email Service (Worker)
 - **Docker Compose** for local multi-container orchestration.
 - **Render.com** for cloud deployment and managed RabbitMQ service.
 
----
-
 ## Setup and Run Locally
 
 1. **Prerequisites:**
-
    - Docker and Docker Compose installed
    - Git installed
 
 2. **Clone the repository:**
-
-   ```bash
    git clone 
    cd microservice-project
 ## start and stop service
