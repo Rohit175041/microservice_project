@@ -58,7 +58,7 @@ Email Service (Worker)
 2. **Clone the repository:**
 
    ```bash
-   git clone <your-repo-url>
+   git clone 
    cd microservice-project
 ## start and stop service
 docker-compose up --build
