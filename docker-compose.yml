@@ -4,11 +4,12 @@ services:
   rabbitmq:
     image: rabbitmq:3-management
     ports:
-      - "5672:5672"     # RabbitMQ broker port
-      - "15672:15672"   # RabbitMQ management UI
+      - "5672:5672"       # AMQP protocol
+      - "15672:15672"     # Management UI
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
+    restart: unless-stopped
 
   user_service:
     build: ./user_service
@@ -20,8 +21,9 @@ services:
       - rabbitmq
     volumes:
       - ./user_service/logs:/app/logs
+    restart: unless-stopped
 
-  email-service:
+  email_service:
     build: ./email_service
     environment:
       RABBITMQ_URL: amqp://guest:guest@rabbitmq:5672/
@@ -29,3 +31,4 @@ services:
       - rabbitmq
     volumes:
       - ./email_service/logs:/app/logs
+    restart: unless-stopped
