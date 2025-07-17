@@ -1,4 +1,5 @@
 # Ignore logs directory in email_service
+.env
 *.log
 node_modules
 npm-debug.log

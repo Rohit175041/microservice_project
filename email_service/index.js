@@ -1,15 +1,6 @@
-// const { connectAndConsume } = require('./rabbitmq');
-// const logger = require('./logger');
-
-// function sendWelcomeEmail(user) {
-//   logger.info(`Sending welcome email to ${user.name} <${user.email}>`);
-//   // Simulate real email service here
-// }
-
-// connectAndConsume('user_registered', sendWelcomeEmail);
-
 
 const { connectAndConsume } = require('./rabbitmq');
+require('dotenv').config(); // Load env variables
 const logger = require('./logger');
 const nodemailer = require('nodemailer');
 
@@ -17,8 +8,8 @@ const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'utube175041@gmail.com',        // your gmail address
-    pass: 'higgwtlbumzkavuk',     // use App Password if 2FA enabled
+    user: process.env.EMAIL_USER,        // your gmail address
+    pass: process.env.EMAIL_PASS,     // use App Password if 2FA enabled
   },
 });
 
